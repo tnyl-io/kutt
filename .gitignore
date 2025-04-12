@@ -1,16 +1,36 @@
+# Environment and local config
 .env
-.vscode/
-logs
-client/.next/
+
+# Node/npm stuff
 node_modules/
+*.log
+*.pid
+*.sock
+
+# Logs and runtime
+logs/
+tmp/
+redistest/
+production-server
+
+# Build and cache
+client/.next/
+docs/api/static
+
+# Local dev and editor settings
+.vscode/
+.idea/
+**/.DS_Store
+Thumbs.db
+
+# DB dump and backups
+dump.rdb
+backups/
+db/*
+!db/.gitkeep
+
+# Sensitive config files
 client/config.js
 client/old.config.js
 server/config.js
 server/old.config.js
-production-server
-.idea/
-dump.rdb
-docs/api/static
-**/.DS_Store
-db/*
-!db/.gitkeep

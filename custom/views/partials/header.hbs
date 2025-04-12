@@ -1,0 +1,40 @@
+<header>
+  <div class="logo-wrapper">
+    <a class="logo nav" href="/" title="Homepage">
+      <img src="/images/logo.png" alt="{{site_name}} logo" width="24" height="24" />
+      {{site_name}}
+    </a>
+  </div>
+  <nav>
+    <ul>
+      {{#unless user}}
+        <li>
+          <a class="button primary" href="/login" title="Log in or sign up">
+            Log in / Sign up
+          </a>
+        </li>
+      {{/unless}}
+      {{#if user}}
+        <li>
+          <a class="button primary" href="/settings" title="Settings">
+            <span>{{> icons/cog}}</span>
+            Settings
+          </a>
+        </li>
+        {{#if isAdmin}}
+          <li>
+            <a class="button secondary" href="/admin" title="Admin">
+              <span>{{> icons/shield}}</span>
+              Admin
+            </a>
+          </li>
+        {{/if}}
+        <li>
+          <a class="nav" href="/logout" title="Log out">
+            Log out
+          </a>
+        </li>
+      {{/if}}
+    </ul>
+  </nav>
+</header>

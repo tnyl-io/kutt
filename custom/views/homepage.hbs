@@ -1,0 +1,11 @@
+{{> header}}
+
+{{> shortener}}
+
+{{#if user}}
+  {{> links/table}}
+{{else}}
+  {{> homepage/marketing}}
+{{/if}}
+
+{{> footer}}

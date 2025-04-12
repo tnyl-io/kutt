@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>{{site_name}} – Free, fast & private URL shortener</title>
+  <meta name="description" content="TNYL is a modern, privacy-focused URL shortener. Create short, memorable, and branded links easily and securely." />
+  <meta name="keywords" content="URL shortener, link shortener, short URL, custom URL, branded links, tnurl, TNYL" />
+  <meta name="author" content="TNYL" />
+  <meta name="robots" content="index, follow" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="theme-color" content="#3b82f6" />
+
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3B875XVJ1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B3B875XVJ1');
+  </script>
+
+  <meta property="og:url" content="https://{{default_domain}}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{site_name}}" />
+  <meta property="og:description" content="Free & Open Source Modern URL Shortener" />
+  <meta name="twitter:url" content="https://{{default_domain}}" />
+  <meta name="twitter:title" content="{{site_name}}" />
+  <meta name="twitter:description" content="Free & Open Source Modern URL Shortener" />
+
+  <meta name="htmx-config" content='{"withCredentials":true}'>
+  
+  <link rel="stylesheet" href="/css/styles.css">
+  {{#each custom_styles}}
+    <link rel="stylesheet" href="/css/{{this}}">
+  {{/each}}
+  {{{block "stylesheets"}}}
+</head>
+<body>
+  <div class="main-wrapper">
+    {{{body}}}
+  </div>
+
+  {{{block "scripts"}}}
+  <script src="/libs/htmx.min.js"></script>
+  <script src="/libs/qrcode.min.js"></script>
+  <script src="/scripts/main.js"></script>
+</body>
+</html>
