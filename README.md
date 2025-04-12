@@ -29,8 +29,8 @@ How to Self-Host TNYL
 
 4. Copy the env file and configure:
  cp .env.example .env
- # Edit with your PostgreSQL, Redis, and SMTP settings
- # Refer to the official Kutt guide for env vars
+ - Edit with your PostgreSQL, Redis, and SMTP settings
+ - Refer to the official Kutt guide for env vars
 
 5. Install dependencies:
 npm install
